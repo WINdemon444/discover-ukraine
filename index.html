@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Discover Ukraine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A one-page travel guide to Ukraine’s cities, landmarks and landscapes, with a personalized trip planner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+<a class="logo" href="#home"><span class="flag"></span>Discover Ukraine</a>
+<button id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+<ul id="links"><li><a href="#home">Home</a></li><li><a href="#cities">Explore Cities</a></li><li><a href="#attractions">Attractions</a></li><li><a href="#plan">Plan Your Trip</a></li><li><a href="#tips">Travel Tips</a></li></ul>
+</div></nav>
+
+<header class="hero" id="home">
+<div class="bg" id="heroBg" aria-hidden="true" style="position:absolute;inset:0"></div>
+<div class="wrap">
+<h1>Discover the Beauty of Ukraine</h1>
+<p>Explore amazing cities, discover Ukrainian culture, and plan a journey that matches your interests.</p>
+<div class="btns"><a class="btn y" href="#cities">Explore Cities</a><a class="btn o" href="#plan">Plan My Trip</a></div>
+</div>
+</header>
+<div class="stitch" aria-hidden="true"></div>
+
+<section id="cities"><div class="wrap">
+<h2>Explore Ukrainian Cities</h2>
+<p class="lead">Six cities, six very different characters. Open a card for landmarks, local food and a surprising fact.</p>
+<div class="grid" id="cityGrid"></div>
+</div></section>
+
+<section id="attractions" class="alt"><div class="wrap">
+<h2>Places Worth Discovering</h2>
+<p class="lead">Landmarks and landscapes that show up on almost every traveler’s list.</p>
+<div class="grid" id="attrGrid"></div>
+</div></section>
+
+<section id="plan"><div class="wrap">
+<h2>Let’s Plan Your Trip to Ukraine!</h2>
+<p class="lead">Five quick questions. We don’t ask for your name, email or any personal details.</p>
+<div class="quiz" id="quiz" aria-live="polite"></div>
+</div></section>
+
+<section id="tips" class="alt"><div class="wrap">
+<h2>Know Before You Go</h2>
+<div class="tips">
+<div class="tip"><h3>Food to try</h3><ul><li><b>Borshch</b>: beetroot soup, served with sour cream and garlic bread (pampushky).</li><li><b>Varenyky</b>: dumplings with potato, cherry or cheese.</li><li><b>Chicken Kyiv</b>: a buttery, breaded cutlet.</li><li><b>Banosh</b>: Carpathian cornmeal with bryndza cheese.</li><li><b>Syrnyky</b>: sweet fried cheese pancakes.</li></ul></div>
+<div class="tip"><h3>Useful phrases</h3><ul><li>Привіт (<i>pryvit</i>): Hello</li><li>Дякую (<i>diakuiu</i>): Thank you</li><li>Будь ласка (<i>bud’ laska</i>): Please / You’re welcome</li><li>Так / Ні (<i>tak / ni</i>): Yes / No</li><li>Скільки коштує? (<i>skilky koshtuie?</i>): How much is it?</li><li>Смачного (<i>smachnoho</i>): Enjoy your meal</li></ul></div>
+<div class="tip"><h3>Customs and etiquette</h3><ul><li>Greet people with a handshake and a smile; Ukrainians value politeness.</li><li>If invited home, take a small gift and expect to remove your shoes.</li><li>Give flowers in odd numbers; even numbers are for funerals.</li><li>Dress modestly in churches and monasteries.</li><li>Say “Ukraine”, not “the Ukraine”.</li></ul></div>
+<div class="tip"><h3>Getting around</h3><ul><li>Intercity trains are a popular, comfortable option; check timetables and book ahead.</li><li>Plan extra time between cities, as schedules can change.</li><li>City transport usually includes metro, trams, buses and ride-hailing apps.</li><li>Check opening hours for museums, churches and parks before you go; they vary by season and day.</li></ul></div>
+</div>
+<div class="notice" role="note">Before planning or taking any trip, consult current official travel advisories, local restrictions and air-alert information. This site does not guarantee that any destination or route is safe or accessible.</div>
+</div></section>
+
+<div class="stitch" aria-hidden="true"></div>
+<footer>
+<div class="wrap">
+<div><a class="logo" href="#home"><span class="flag"></span>Discover Ukraine</a><p>A friendly guide to Ukraine’s cities, landmarks and culture, with a trip planner that adapts to your interests.</p></div>
+<div><h3>Quick links</h3><ul><li><a href="#home">Home</a></li><li><a href="#cities">Explore Cities</a></li><li><a href="#attractions">Attractions</a></li><li><a href="#plan">Plan Your Trip</a></li><li><a href="#tips">Travel Tips</a></li></ul></div>
+<div><h3>Stay informed</h3><p>Always check current travel information and official advisories before you travel.</p></div>
+</div>
+<div class="fine">© 2026 Discover Ukraine</div>
+</footer>
+
+<dialog id="modal" aria-labelledby="mTitle"><button class="x" id="mClose" aria-label="Close">✕</button><div id="mBody"></div></dialog>
+
+<script src="script.js" defer></script>
+</body>
+</html>

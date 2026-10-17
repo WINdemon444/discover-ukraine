@@ -1,0 +1,84 @@
+/* ---------- Illustrated scenes (inline SVG, no external images) ---------- */
+var SC={
+domes:{sky:["#7fb7ff","#ffe9a8"],g:"#2e7d4f",art:'<g fill="#fff"><rect x="90" y="140" width="40" height="70"/><rect x="170" y="110" width="50" height="100"/><rect x="255" y="150" width="35" height="60"/></g><g fill="#FFD700"><path d="M90 140a20 24 0 0 1 40 0z"/><path d="M170 110a25 30 0 0 1 50 0z"/><path d="M255 150a17 20 0 0 1 35 0z"/><rect x="194" y="68" width="3" height="14"/></g>'},
+spires:{sky:["#9ec5ee","#fbe2c3"],g:"#6b3f2a",art:'<g fill="#c9a27a"><rect x="80" y="130" width="50" height="80"/><rect x="150" y="150" width="130" height="60"/><rect x="300" y="120" width="40" height="90"/></g><g fill="#8a3b2a"><path d="M80 130l25-60 25 60z"/><path d="M150 150l65-40 65 40z"/><path d="M300 120l20-50 20 50z"/></g>'},
+opera:{sky:["#5aa9e6","#ffe1b3"],g:"#b89b6b",art:'<g fill="#f3ead8"><rect x="100" y="140" width="200" height="70"/><path d="M90 140l110-45 110 45z"/><rect x="160" y="82" width="80" height="20"/></g><g fill="#c9b78f"><rect x="115" y="150" width="10" height="60"/><rect x="150" y="150" width="10" height="60"/><rect x="190" y="150" width="10" height="60"/><rect x="230" y="150" width="10" height="60"/><rect x="265" y="150" width="10" height="60"/></g><path d="M170 82a30 30 0 0 1 60 0z" fill="#2e7d6f"/>'},
+mountains:{sky:["#4a90d9","#d6ecff"],g:"#2f6b3a",art:'<path d="M0 210L90 90l50 70 60-100 90 150 40-50 70 90z" fill="#3b6ea5"/><path d="M200 60l-22 36 22-10 22 10z M90 90l-14 22 14-6 14 6z" fill="#fff"/><path d="M0 210l60-50 70 50 80-60 90 60z" fill="#2f6b3a"/>'},
+river:{sky:["#7dc0f0","#fff1b8"],g:"#1b5e9b",art:'<path d="M0 160h400v80H0z" fill="#1b6fb5"/><path d="M90 160q50-70 120-45 60-20 110 45z" fill="#4c9a54"/><g fill="none" stroke="#9fd3f7" stroke-width="3"><path d="M20 185q20-10 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0"/><path d="M0 210q20-10 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0"/></g>'},
+blocks:{sky:["#6bb0ee","#ffe9bf"],g:"#5b6b82",art:'<g fill="#8fa4c4"><rect x="60" y="120" width="60" height="90"/><rect x="130" y="80" width="50" height="130"/><rect x="190" y="130" width="70" height="80"/><rect x="270" y="100" width="55" height="110"/></g><g fill="#FFD700"><rect x="72" y="135" width="10" height="10"/><rect x="98" y="135" width="10" height="10"/><rect x="143" y="100" width="10" height="10"/><rect x="143" y="130" width="10" height="10"/><rect x="285" y="120" width="10" height="10"/><rect x="302" y="150" width="10" height="10"/></g>'},
+castle:{sky:["#86b9e8","#ffe7b0"],g:"#4a7c3f",art:'<path d="M0 210V170h400v40z" fill="#4a7c3f"/><path d="M110 210l20-60h140l20 60z" fill="#7d6b57"/><g fill="#d9cdb8"><rect x="140" y="90" width="40" height="70"/><rect x="190" y="110" width="50" height="50"/><rect x="250" y="95" width="35" height="65"/></g><g fill="#b3412f"><path d="M136 90l24-34 24 34z"/><path d="M246 95l21-30 21 30z"/></g>'}
+};
+function scene(k,id,photo){var s=SC[k];var svg='<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="'+id+'"><defs><linearGradient id="g'+id.replace(/\W/g,'')+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+s.sky[0]+'"/><stop offset="1" stop-color="'+s.sky[1]+'"/></linearGradient></defs><rect width="400" height="240" fill="url(#g'+id.replace(/\W/g,'')+')"/><circle cx="320" cy="60" r="26" fill="#FFD700" opacity=".9"/>'+s.art+'<rect y="208" width="400" height="32" fill="'+s.g+'"/></svg>';return '<span class="pic">'+svg+(photo?'<img src="assets/images/'+photo+'.jpg" alt="'+id+'" width="1200" height="750" loading="lazy" decoding="async" onerror="this.remove()">':'')+'</span>'}
+
+/* ---------- Data ---------- */
+var D={
+kyiv:{n:"Kyiv",k:"domes",d:"Ukraine’s capital, known for its golden-domed churches, historic landmarks, and vibrant city life.",a:["Saint Sophia Cathedral","Kyiv Pechersk Lavra","St Andrew’s Descent","Independence Square"],f:["Chicken Kyiv","Kyiv cake","Borshch"],fact:"The Arsenalna metro station sits about 105 m underground, among the deepest in the world.",w:{history:3,city:3,photo:2,food:1,family:2,luxury:2,social:2,budget:1},acts:["Walk through Saint Sophia Cathedral","Explore the Pechersk Lavra caves and churches","Stroll St Andrew’s Descent for crafts and views","Try local dishes in a Podil café"]},
+kharkiv:{n:"Kharkiv",k:"blocks",d:"Known for its universities, architecture, and large city squares.",a:["Freedom Square","Derzhprom building","Shevchenko Garden","Mirror Stream fountain"],f:["Meat jelly (kholodets)","Varenyky","Sweet pastries"],fact:"Freedom Square is counted among the largest city squares in Europe.",w:{city:3,history:1,budget:3,social:1,photo:1},acts:["Cross Freedom Square and admire the architecture","See the Derzhprom constructivist landmark","Relax in Shevchenko Garden","Visit a university-district café"]},
+odesa:{n:"Odesa",k:"opera",d:"A historic Black Sea city famous for its opera house and maritime heritage.",a:["Odesa Opera House","Potemkin Stairs","Deribasivska Street","Privoz Market"],f:["Forshmak","Fresh Black Sea fish","Privoz market snacks"],fact:"The Potemkin Stairs are designed so that from the top only the landings are visible.",w:{city:3,photo:2,food:2,romance:2,social:3,luxury:2,history:1,family:1},acts:["Admire the Opera House exterior and lobby","Walk the Potemkin Stairs to the port","Stroll Deribasivska Street","Sample food at Privoz Market"]},
+dnipro:{n:"Dnipro",k:"river",d:"A major city known for its riverfront and urban attractions.",a:["Dnipro Embankment","Monastyrskyi Island","Yavornytskyi History Museum","City parks"],f:["Varenyky","River fish dishes","Local bakeries"],fact:"The city was renamed Dnipro in 2016 after the great river it sits on.",w:{city:3,family:2,budget:2,photo:1,social:1},acts:["Walk the long riverside embankment","Visit Monastyrskyi Island","Tour the history museum","Relax in a riverside park"]},
+lviv:{n:"Lviv",k:"spires",d:"Famous for its charming old town, historic buildings, and café culture.",a:["Market Square (Rynok)","Lviv Opera House","High Castle hill","Armenian Cathedral"],f:["Coffee and desserts","Cheesecake (syrnyk)","Handmade chocolate"],fact:"Lviv’s historic centre has been a UNESCO World Heritage Site since 1998.",w:{history:3,city:2,food:3,photo:3,romance:3,social:2,budget:2,family:1,village:1},acts:["Wander Market Square and the old-town lanes","Visit the Armenian Cathedral","Climb High Castle hill for the skyline","Take a café and dessert crawl"]},
+zaporizhzhia:{n:"Zaporizhzhia",k:"river",d:"Known for its Cossack heritage and Khortytsia Island.",a:["Khortytsia Island","Zaporozhian Cossack museum","Dnipro Hydroelectric Station views","Riverside promenade"],f:["Kulish (Cossack stew)","Fresh river fish","Homemade bread"],fact:"Khortytsia is the largest island on the Dnipro river.",w:{history:3,nature:2,family:2,adventure:1,photo:1,budget:2},acts:["Explore Khortytsia Island on foot or by bike","Visit the Cossack history museum","Enjoy the river views","Try a traditional Cossack-style meal"]},
+carpathians:{n:"Carpathian Mountains",k:"mountains",d:"Ukraine’s green mountain region of forests, lakes, meadows and villages.",a:["Hoverla (2,061 m)","Synevyr Lake","Probiy waterfall, Yaremche","Highland villages"],f:["Banosh with bryndza","Mushroom dishes","Herbal tea"],fact:"Hoverla is Ukraine’s highest peak at 2,061 m.",w:{nature:5,adventure:4,photo:3,village:2,romance:2,budget:1,food:1,family:1},acts:["Hike a mountain trail suited to your level","Visit Synevyr Lake","See the Probiy waterfall","Eat banosh in a highland village"]},
+kamianets:{n:"Kamianets-Podilskyi",k:"castle",d:"A fairy-tale old town and castle set on a rocky peninsula above a river canyon.",a:["Kamianets-Podilskyi Castle","Old Town streets","Smotrych River canyon","Old town walls"],f:["Podillia home cooking","Local pastries","Village honey"],fact:"The old town is almost encircled by the Smotrych River canyon.",w:{history:3,village:4,photo:3,romance:2,budget:2,food:1},acts:["Tour the castle and its towers","Walk the old-town streets","Take photos of the canyon","Enjoy a relaxed local lunch"]}
+};
+var CITY_IDS=["kyiv","kharkiv","odesa","dnipro","lviv","zaporizhzhia"];
+var ATTR=[["Saint Sophia Cathedral","Kyiv","domes","A UNESCO-listed cathedral with Byzantine mosaics and a green-and-gold bell tower."],["Lviv Market Square","Lviv","spires","The heart of the old town, ringed by townhouses, cafés and the town hall tower."],["Odesa Opera House","Odesa","opera","A theatre of grand curves and carved detail, a landmark of the Black Sea coast."],["The Carpathian Mountains","Western Ukraine","mountains","Forested ridges, alpine meadows and lakes for hiking and fresh air."],["Khortytsia Island","Zaporizhzhia","river","A large island park on the Dnipro, rich in Cossack history and nature."]];
+
+["saint-sophia","lviv-market-square","odesa-opera-house","carpathians","khortytsia"].forEach(function(s,i){ATTR[i][4]=s});
+/* ---------- Render cards ---------- */
+function esc(s){return s}
+document.getElementById("heroBg").innerHTML=scene("domes","Golden domes above the Dnipro").replace('<svg ','<svg style="width:100%;height:100%;opacity:.55" ');
+document.getElementById("cityGrid").innerHTML=CITY_IDS.map(function(id){var c=D[id];return '<article class="card" data-id="'+id+'">'+scene(c.k,c.n+" illustration",id)+'<div class="body"><h3>'+c.n+'</h3><p>'+c.d+'</p><button class="btn b" data-open="'+id+'">Explore City</button></div></article>'}).join("");
+document.getElementById("attrGrid").innerHTML=ATTR.map(function(a){return '<article class="card">'+scene(a[2],a[0]+" in "+a[1],a[4])+'<div class="body"><span class="loc">'+a[1]+'</span><h3>'+a[0]+'</h3><p>'+a[3]+'</p></div></article>'}).join("");
+
+/* ---------- Modal ---------- */
+var modal=document.getElementById("modal");
+function openCity(id){var c=D[id];document.getElementById("mBody").innerHTML=scene(c.k,c.n+" illustration",id)+'<div class="in"><h3 id="mTitle">'+c.n+'</h3><p>'+c.d+'</p><h4>Famous attractions</h4><ul>'+c.a.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><h4>Local food</h4><ul>'+c.f.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><h4>Did you know?</h4><p>'+c.fact+'</p><p><small>Check opening hours and current travel information before you go.</small></p></div>';modal.showModal()}
+document.addEventListener("click",function(e){var b=e.target.closest("[data-open]");if(b)openCity(b.dataset.open)});
+document.getElementById("mClose").onclick=function(){modal.close()};
+modal.addEventListener("click",function(e){if(e.target===modal)modal.close()});
+
+/* ---------- Nav ---------- */
+var mb=document.getElementById("menuBtn"),ul=document.getElementById("links");
+mb.onclick=function(){var o=ul.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+ul.addEventListener("click",function(e){if(e.target.tagName==="A"){ul.classList.remove("open");mb.setAttribute("aria-expanded",false)}});
+
+/* ---------- Questionnaire ---------- */
+var Q=[
+{t:"Why are you planning to visit Ukraine?",o:[["🏛️","History and culture",["history"],"history"],["🌆","Exploring beautiful cities",["city"],"exploring beautiful cities"],["⛰️","Nature and mountains",["nature","adventure"],"nature and mountains"],["🍲","Ukrainian food and traditions",["food"],"food and traditions"],["📷","Photography and sightseeing",["photo"],"photography and sightseeing"],["👋","Visiting friends or family",["city","family"],"seeing friends or family"],["💼","Business or work",["city","luxury"],"business and city life"],["🧭","Just exploring my options",["city","history","nature"],"exploring your options"]]},
+{t:"What would you most like to explore?",o:[["🏙️","Big cities",["city","social"]],["🏰","Historical landmarks",["history"]],["🏔️","Mountains and nature",["nature","adventure"]],["🏡","Small towns and villages",["village"]],["✨","A little bit of everything",["city","history","nature","village"]]]},
+{t:"How long will your trip be?",o:[["⏱️","1–3 days",[],2],["📅","4–7 days",[],5],["🗓️","1–2 weeks",[],10],["🌍","More than 2 weeks",[],16],["🤔","Not decided yet",[],5]]},
+{t:"Who are you travelling with?",o:[["🧍","Solo",["social"],"a solo trip"],["🧑‍🤝‍🧑","Friends",["social","adventure"],"a trip with friends"],["👨‍👩‍👧","Family",["family"],"a family trip"],["💑","Partner",["romance"],"a trip for two"],["👥","Group",["social","budget"],"a group trip"]]},
+{t:"What is your travel style?",o:[["💸","Budget-friendly",["budget"]],["🛋️","Comfortable",["food","city"]],["💎","Luxury",["luxury"]],["🎒","Adventure",["adventure","nature"]],["🙂","No preference",[]]]}
+];
+var ans=[],step=0,quiz=document.getElementById("quiz");
+function stage(html,cb){var s=quiz.querySelector(".stage");if(s){s.classList.add("out");setTimeout(function(){quiz.innerHTML=html;cb&&cb()},230)}else{quiz.innerHTML=html;cb&&cb()}}
+function showQ(){var q=Q[step],last=step===Q.length-1;
+var html='<div class="stage"><div class="prog"><span>Question '+(step+1)+' of '+Q.length+'</span><span>'+Math.round(step/Q.length*100)+'%</span></div><div class="bar"><i style="width:'+(step/Q.length*100)+'%"></i></div><h3>'+q.t+'</h3><div class="opts">'+q.o.map(function(o,i){return '<button class="opt" data-i="'+i+'" aria-pressed="'+(ans[step]===i)+'"><span>'+o[0]+'</span>'+o[1]+'</button>'}).join("")+'</div><p class="err" id="err" role="alert"></p><div class="qnav"><button class="btn o" id="back" style="color:var(--blue)"'+(step?'':' disabled')+'>Back</button><button class="btn y" id="next">'+(last?'See my plan':'Next')+'</button></div></div>';
+stage(html,function(){var b=quiz.querySelector(".bar i");b.style.width=((step+(ans[step]!==undefined?1:0))/Q.length*100)+"%"})}
+quiz.addEventListener("click",function(e){var o=e.target.closest(".opt");
+if(o){ans[step]=+o.dataset.i;quiz.querySelectorAll(".opt").forEach(function(x){x.setAttribute("aria-pressed",x===o)});quiz.querySelector(".bar i").style.width=((step+1)/Q.length*100)+"%";document.getElementById("err").textContent="";return}
+if(e.target.id==="back"&&step>0){step--;showQ()}
+if(e.target.id==="next"){if(ans[step]===undefined){document.getElementById("err").textContent="Please choose an answer to continue.";return}
+if(step<Q.length-1){step++;showQ()}else showResult()}
+if(e.target.id==="restart"){ans=[];step=0;showQ();document.getElementById("plan").scrollIntoView()}
+if(e.target.id==="explore"){document.querySelectorAll(".card.rec").forEach(function(c){c.classList.remove("rec")});recs.forEach(function(id){var c=document.querySelector('.card[data-id="'+id+'"]');if(c)c.classList.add("rec")});document.getElementById("cities").scrollIntoView()}});
+
+/* ---------- Recommendation engine ---------- */
+var recs=[];
+function recommend(){var tags={};Q.forEach(function(q,i){if(ans[i]===undefined)return;q.o[ans[i]][2].forEach(function(t){tags[t]=(tags[t]||0)+(i===0?2:1)})});
+var days=Q[2].o[ans[2]][3],ids=Object.keys(D);
+var scored=ids.map(function(id,ix){var s=0;for(var t in tags)s+=(D[id].w[t]||0)*tags[t];return{id:id,s:s,ix:ix}});
+scored.sort(function(a,b){return b.s-a.s||a.ix-b.ix});
+var n=days<=3?2:days<=8?3:days>=14?4:3;
+return{ids:scored.slice(0,n).map(function(x){return x.id}),days:days}}
+function showResult(){var r=recommend(),ids=r.ids,days=r.days;recs=ids;
+var reason=Q[0].o[ans[0]][3],who=Q[3].o[ans[3]][3],tripLen=Q[2].o[ans[2]][1],style=Q[4].o[ans[4]][1].toLowerCase();
+var k=days<=3?1:days<=5?2:days<=10?3:ids.length;k=Math.min(k,ids.length);
+var base=Math.floor(days/k),extra=days%k,d=1,itin=[];
+for(var i=0;i<k;i++){var len=base+(i<extra?1:0),c=D[ids[i]],end=d+len-1;
+itin.push('<li><b>'+(len>1?'Days '+d+'–'+end:'Day '+d)+': '+c.n+'</b><br>'+c.acts.slice(0,Math.min(4,Math.max(2,len+1))).join("; ")+'.</li>');d=end+1}
+var cards=ids.map(function(id){var c=D[id];return '<article class="card">'+scene(c.k,c.n+" illustration",id)+'<div class="body"><h3>'+c.n+'</h3><p>'+c.d+'</p><p><b>Try:</b> '+c.acts.slice(0,2).join("; ")+'.</p><button class="btn b" data-open="'+id+'">Details</button></div></article>'}).join("");
+var html='<div class="stage res"><div class="bar"><i style="width:100%"></i></div><h3 style="font-size:2rem">Your Ukraine Travel Plan</h3><p class="lead">Welcome! You’re planning '+who+' focused on '+reason+', with a “'+style+'” travel style. Here are the places that fit best.</p><div class="grid">'+cards+'</div><h3 style="margin-top:2rem">Sample itinerary ('+(Q[2].o[ans[2]][1]==="Not decided yet"?"a 5-day example":days+" days"+(days>=16?" or more":""))+')</h3><ol class="itin">'+itin.join("")+'</ol><p><small>Allow extra time for travel between destinations, and check opening hours, timetables and current official travel advisories before you go.</small></p><div class="btns"><button class="btn y" id="explore">Explore These Destinations</button><button class="btn o" id="restart" style="color:var(--blue)">Start Again</button></div></div>';
+stage(html)}
+showQ();

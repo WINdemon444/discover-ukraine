@@ -33,3 +33,22 @@ dialog.gd{max-width:420px}
 .pad{display:flex;justify-content:center;gap:.5rem;margin-top:.7rem}
 .pad button{width:52px;height:46px;padding:0;border-radius:12px}
 @media (prefers-reduced-motion:reduce){.sx,.sx.got,.pts,.bump{animation:none!important}.pts{opacity:0}}
+/* v2 additions */
+.sx{width:var(--s,24px);height:var(--s,24px);font-size:calc(var(--s,24px)*.58);line-height:var(--s,24px);opacity:var(--o,.5);animation:none;background:radial-gradient(circle,rgba(255,215,0,.45),rgba(255,215,0,.05) 70%)}
+.sx.glow{animation:sxg 3s ease-in-out infinite}
+.sx-host li.sx-host,li.sx-host{list-style:none}
+#gpB{max-height:70vh;overflow:auto}
+#gpB h4{margin:.8rem 0 .3rem;font-size:.95rem}
+.gsub small,#gpB h4 small{font-weight:400;color:var(--muted)}
+.gl{display:flex;justify-content:space-between;font-weight:800;color:var(--blue);margin-bottom:.2rem}
+.seg{display:flex;gap:.3rem;justify-content:center;margin:.4rem 0}
+.seg button{flex:1;border:2px solid var(--blue);background:transparent;color:var(--ink);border-radius:999px;padding:.3rem .5rem;font-weight:700;font-size:.85rem}
+.seg button[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--yellow)}
+.seg button:disabled{opacity:.5}
+.bt{width:100%;border-collapse:collapse;font-size:.85rem;margin:.3rem 0}
+.bt td,.bt th{padding:.25rem .3rem;border-bottom:1px solid var(--line);text-align:left}
+.gb button:disabled{opacity:.4;cursor:not-allowed}
+.hud{flex-wrap:wrap;gap:.2rem .8rem;font-size:.9rem}
+.ov .sm{font-size:.85rem;max-width:26ch;line-height:1.35;text-align:center}
+.ov{padding:1rem;text-align:center}
+.gin .gbar{max-width:340px;margin:.3rem auto}

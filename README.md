@@ -13,6 +13,9 @@ A one-page travel guide to Ukraine with six city cards, an attractions section a
 ## Add real photos
 Run `python3 tools/fetch_images.py` on your computer (needs internet). It downloads one openly licensed Wikimedia Commons photo per image slot into `assets/images/` and writes `CREDITS.md`. Open the photos and delete any you don't like; you can also drop in your own JPGs with the same names. Any missing photo falls back to the built-in illustration.
 
+## Games
+Open the 🌻 Games pill (bottom right). Secret Hunt has Easy, Normal (3:00, 5 hints) and Hard (1:30, 2 hints) modes with decoys; Catch the Sunflowers and the Labyrinth each have three difficulties. Personal bests are saved per game and difficulty in this browser only (localStorage).
+
 ## Run locally
 Double-click `index.html`, or for a local server run `python3 -m http.server 8000` in this folder and open http://localhost:8000.
 

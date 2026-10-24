@@ -16,6 +16,8 @@ Run `python3 tools/fetch_images.py` on your computer (needs internet). It downlo
 ## Games
 Open the 🌻 Games pill (bottom right). Secret Hunt has Easy, Normal (3:00, 5 hints) and Hard (1:30, 2 hints) modes with decoys; Catch the Sunflowers and the Labyrinth each have three difficulties. Personal bests are saved per game and difficulty in this browser only (localStorage).
 
+Prefer Unsplash? Edit `tools/fetch_unsplash.py` (it lists the photos picked so far) and run `python3 tools/fetch_unsplash.py`. Check every photo shows the right place first.
+
 ## Run locally
 Double-click `index.html`, or for a local server run `python3 -m http.server 8000` in this folder and open http://localhost:8000.
 

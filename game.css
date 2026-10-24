@@ -1,0 +1,35 @@
+/* Discover Ukraine: games (Secret Hunt, Catch the Sunflowers, Labyrinth) */
+.sx-host{position:relative}
+.sx{position:absolute;z-index:3;width:28px;height:28px;padding:0;border:0;border-radius:50%;font-size:15px;line-height:28px;text-align:center;cursor:pointer;background:radial-gradient(circle,rgba(255,215,0,.75),rgba(255,215,0,.15) 70%);opacity:.5;transition:opacity .2s,transform .2s;animation:sxg 3s ease-in-out infinite}
+.sx:hover,.sx:focus-visible,.sx.pulse{opacity:1;transform:scale(1.25);box-shadow:0 0 14px 4px rgba(255,215,0,.8)}
+.sx.got{animation:sxp .5s forwards}
+@keyframes sxg{50%{box-shadow:0 0 10px 2px rgba(255,215,0,.55)}}
+@keyframes sxp{40%{transform:scale(1.8);opacity:1}100%{transform:scale(0) rotate(180deg);opacity:0}}
+.pts{position:fixed;z-index:90;font:800 1.2rem Fraunces,Georgia,serif;color:var(--yellow);text-shadow:0 1px 4px #003;pointer-events:none;animation:pts 1s forwards}
+@keyframes pts{to{transform:translateY(-48px);opacity:0}}
+#gp{position:fixed;z-index:40;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));width:min(310px,calc(100vw - 2rem));display:flex;flex-direction:column;align-items:flex-end;gap:.5rem}
+#gpT{background:var(--blue);color:#fff;border:2px solid var(--yellow);border-radius:999px;padding:.5rem 1rem;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+#gpB{width:100%;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:1rem;box-shadow:0 10px 30px rgba(0,30,80,.3);font-size:.95rem;line-height:1.45}
+#gpB[hidden]{display:none}
+#gpB h3{margin:0 0 .4rem;font-size:1.15rem;color:var(--blue)}
+.gbar{height:10px;border-radius:99px;background:var(--soft);overflow:hidden;margin:.5rem 0}
+.gbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--yellow));transition:width .4s}
+.bump{animation:bump .4s}
+@keyframes bump{50%{transform:scale(1.25);color:var(--yellow)}}
+.gh{min-height:2.6em;margin:.3rem 0;color:var(--muted);font-style:italic}
+.gb{display:flex;flex-wrap:wrap;gap:.4rem}
+.gb button,.pad button{border:2px solid var(--blue);background:transparent;color:var(--ink);border-radius:999px;padding:.35rem .8rem;font-weight:700;font-size:.85rem}
+.gb button:hover{background:var(--yellow);color:#14213d}
+dialog.gd{max-width:420px}
+.gin{padding:1.4rem 1.2rem 1.5rem;text-align:center}
+.gin h3{color:var(--blue);margin-bottom:.2rem}
+.gsub{margin:0 0 .6rem;color:var(--muted);font-size:.92rem}
+.hud{display:flex;justify-content:space-around;font-weight:700;margin-bottom:.5rem}
+.cw{position:relative;max-width:340px;margin:0 auto;touch-action:none}
+.cw canvas{width:100%;height:auto;border-radius:16px;display:block;touch-action:none;border:3px solid var(--blue)}
+.ov{position:absolute;inset:0;border-radius:16px;background:rgba(0,40,100,.78);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;font-size:1.2rem}
+.ov[hidden]{display:none}
+.gbtns{display:flex;justify-content:center;gap:.7rem;margin-top:.9rem}
+.pad{display:flex;justify-content:center;gap:.5rem;margin-top:.7rem}
+.pad button{width:52px;height:46px;padding:0;border-radius:12px}
+@media (prefers-reduced-motion:reduce){.sx,.sx.got,.pts,.bump{animation:none!important}.pts{opacity:0}}

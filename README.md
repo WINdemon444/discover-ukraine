@@ -5,9 +5,13 @@ A one-page travel guide to Ukraine with six city cards, an attractions section a
 ## Files
 - `index.html` page structure
 - `style.css` styles (Ukrainian blue `#0057B7` and yellow `#FFD700`, responsive, light/dark)
+- `game.css`, `game.js` Secret Hunt and the two mini-games (progress saved in localStorage)
 - `script.js` city data, modals, questionnaire and recommendation logic
 - `assets/images/` optional photos (see `assets/images/README.txt`); without them the site shows built-in illustrations
 - `vercel.json`, `.gitignore` deployment and Git settings
+
+## Add real photos
+Run `python3 tools/fetch_images.py` on your computer (needs internet). It downloads one openly licensed Wikimedia Commons photo per image slot into `assets/images/` and writes `CREDITS.md`. Open the photos and delete any you don't like; you can also drop in your own JPGs with the same names. Any missing photo falls back to the built-in illustration.
 
 ## Run locally
 Double-click `index.html`, or for a local server run `python3 -m http.server 8000` in this folder and open http://localhost:8000.
